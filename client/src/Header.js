@@ -14,9 +14,8 @@ const myApiCall = () => {
 const myEmailCall = (arg) => {
     console.log("Attempting post with arg", arg);
     axios.post('http://localhost:8080/email',arg ?? 'Nothing sent', { timeout: 5000 }).then((data) => {
-      console.log(data.data)
+      console.log(`Email address is: ${data.data.email}`)
       console.log(data.status)
-      console.log('Testing email submission!')
     }).catch(e => {
         console.log(e);
     })
@@ -54,9 +53,8 @@ export default function Headers() {
             I like reading, working out, travelling, and many other activies. In the future, I plan on completing a Master's degree in Business or in a Big Data field - 
             right now, I am eager to get into the workplace. I have previous co-op experience with Sierra Wireless and Microserve, where I worked for eight months each.
             </p>
-            <button onClick = {myApiCall}>Make API call</button>
-            <p>Test 13425</p>
             <form id="myForm" onSubmit={handleSubmit}>
+            <label>Alternatively, let me contact you: </label>
             <input 
                 type="email" 
                 name="email"
@@ -72,12 +70,15 @@ export default function Headers() {
                     setNameChanged(nameChanged + 1); 
                     // setMyName("Submitted!!!"); 
                     setTimeout(() => {
-                        console.log("Timeout!");
+                        console.log("Timeout over");
                     }, 2000);
                   }}
                 onSubmit={handleSubmit}
             />
-            </form>
+            </form>  
+            <p><br /></p>
+            <button onClick = {myApiCall}>Make API call</button>
+            <p>Test 13425</p>
             <p>Name: {myName}</p>
             <p>Times Changed: {nameChanged}</p>
         </header>
