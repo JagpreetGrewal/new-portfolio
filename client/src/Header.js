@@ -49,12 +49,13 @@ export default function Headers() {
             {/* <img src={logo} className="App-logo" alt="logo" /> */}
             <h3>Hello! I am Jagpreet Grewal!</h3>
             <p className = "Paragraph-header">
-            I am recent SFU graduate, with a <u>B.A.Sc. in Computer Engineering</u>. 
+            I am recent SFU graduate with a <u>B.A.Sc. in Computer Engineering</u>. 
             I like reading, working out, travelling, and many other activies. In the future, I plan on completing a Master's degree in Business or in a Big Data field - 
             right now, I am eager to get into the workplace. I have previous co-op experience with Sierra Wireless and Microserve, where I worked for eight months each.
             </p>
             <form id="myForm" onSubmit={handleSubmit}>
             <label>Alternatively, let me contact you: </label>
+            <br />
             <input 
                 type="email" 
                 name="email"
