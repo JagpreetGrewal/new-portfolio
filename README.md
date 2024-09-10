@@ -1,5 +1,6 @@
 ## Running
 Run `npm run start` in the server folder. An `.env` file must be in that folder with the Resend Token defined in `RESEND_URI=...`
+
 Run `npm run start` in the client folder.
 
 ## About Project
@@ -16,4 +17,7 @@ Made using a MERN tech stack.
 - *Other Libraries:* Nodemailer (for alternative email handling), Axios (for API requests), dotenv (for environment variables)
 
 ## Reading Commits
-From a certain point near the beginning of this project, each commit message starts with a concise title describing what changed since the previous commit. The description is broken up into different sections. A `+` represents positive changes. A `-` represents bugs or mis-steps. And a `*` represents TODO or speculation.
+From a certain point near the beginning of this project, each commit message starts with a concise title describing what changed since the previous commit. The description is broken up into different sections:
+- `+` represents positive changes
+- `-` represents bugs or mis-steps
+- `*` represents TODO or speculation

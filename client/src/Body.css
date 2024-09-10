@@ -8,3 +8,116 @@
     font-size: calc(10px + 2vmin);
     color: white;
   }
+
+/* General layout */
+.resume-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #fdfdfd;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Section layout */
+.resume-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+/* Box styling */
+.resume-box {
+  background-color: #f8f9fa;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: calc(44% - 40px);
+  min-width: 300px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.resume-box:hover {
+  background-color: #f0f8ff;
+  border-color: #007bff;
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.resume-box h3 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.resume-box p {
+  color: #666;
+  margin: 5px 0;
+}
+
+/* Projects (and experience) container styling */
+.projects-container {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.project-box {
+  background-color: #eee; /* background color for the bullet point description */
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #333;
+  transition: all 0.3s ease;
+  border: 1px solid #ddd;
+}
+
+.project-box:hover {
+  background-color: #000000;
+  color: #fff;
+  border-color: #007bff;
+}
+
+/* Skills container styling */
+.skills-container {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.skill-box {
+  background-color: #000000;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  border: 1px solid #ddd;
+}
+
+.skill-box:hover {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .resume-box {
+    width: calc(50% - 40px);
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-box {
+    width: calc(100% - 40px);
+  }
+}

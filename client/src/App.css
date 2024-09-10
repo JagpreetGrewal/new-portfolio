@@ -48,4 +48,58 @@ body {
     background-color: #d62828; /* Slightly darker color when clicked */
   }
   
+  .image-container {
+    /* border: 1px solid black; */
+    padding: 20px;
+    /* margin-top: 20px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    overflow: hidden; /* Ensures the sliding effect is smooth */
+  }
+
+  /* When the image is loaded, move it into place */
+  .slide-in {
+    transform: translateX(0);
+    outline: 3px solid red;
+    /* background-color: #e63946; */
+    width: 900px;
+  }
+  
+  .featured-image {
+    width: 300px;
+    height: 200px;
+    outline: 3px solid gold;
+    background-color: #333;
+    transform: translateX(-100%); /* Initially place the image off-screen to the left */
+    transition: transform 0.6s ease-in-out; /* Transition effect */
+  }
+
+  .imgslide {
+    background-color: #333;
+    position: relative;
+    left: 0;
+    top: 0;
+    opacity: 100%;
+    width: 300px;
+    height: 200px;
+    /* animation: slideshow 3s linear infinite; */
+    /* animation-iteration-count: 1 */
+
+  }
+  
+  @keyframes slideshow {
+    0% {
+      left: -100%;
+      opacity: 0%;
+    }
+  
+    100% {
+      left: 0%;
+      opacity: 100%;
+    }
+  }
+  
+
 

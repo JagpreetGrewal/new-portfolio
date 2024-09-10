@@ -14,7 +14,7 @@ const myApiCall = () => {
 const myEmailCall = (arg) => {
     console.log("Attempting post with arg", arg);
     axios.post('http://localhost:8080/email',arg ?? 'Nothing sent', { timeout: 5000 }).then((data) => {
-      console.log(`Email address is: ${data.data.email}`)
+      console.log(`Email address is: ${data?.data?.email}`)
       console.log(data.status)
     }).catch(e => {
         console.log(e);

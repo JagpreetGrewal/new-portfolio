@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
+import classNames from 'classnames';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import Headers from './Header';
@@ -17,6 +18,9 @@ function App() {
 
   // This image shows up outside of mouse hovers. This variable is indirectly used through setFeaturedContent via featuredContentDefault
   const [defaultContent, setDefaultContent] = useState(contentMap.home.image); 
+
+  // This image is for the sake of transitions. It is the featuredContent image.
+  const [isTransition, setIsTransition] = useState('featured-image slide-in');
 
   const homeImage = () => {
     setFeaturedContent(contentMap.home.image)
@@ -40,6 +44,23 @@ function App() {
   const defaulAboutImage = () => {
     setDefaultContent(contentMap.about.image)
   }
+
+  const liClasses = classNames({
+    'featured-image': true,
+    'slide-in': isTransition === true,
+  });  
+
+  useEffect(() => {
+    setIsTransition(false);
+    console.log('Before ' + liClasses);
+    const timeoutID = setTimeout(() => {
+      setIsTransition(true);
+      console.log(liClasses);
+      // console.log('transitioning...')
+    }, 100); // Adding a small delay to ensure the transition is visible
+
+    return () => {clearTimeout(timeoutID); console.log('finished useEffect!')};
+  }, [featuredContent]);
 
   return (
     <Router>
@@ -72,24 +93,16 @@ function App() {
           </li> */}
         </ul>
       </nav>
-      <section style={{
-        padding: '20px',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#282c34',
-      }}>
-        <img
-            src={featuredContent}
-            alt='Featured Section Photo'
-            style={{
-              width: '300px',
-              height: '200px',
-              outline: '3px solid gold',
-              backgroundColor: '#282c34',
-            }}
-          />
+      <section 
+        className="image-container"
+      >
+        <img 
+          src={featuredContent} 
+          alt="Featured Content" 
+          className='imgslide' /*${isTransition} Try making isTransition side-in or '' directly*/
+        />
       </section>
+
       
       <Routes>
         <Route path={contentMap.home.route} element={contentMap.home.path} />
