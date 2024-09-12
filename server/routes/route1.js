@@ -1,5 +1,6 @@
 const express = require('express')
 const route = express.Router()
+const path = require('path');
 const { Resend } = require("resend");
 
 // Run using node --env-file=.env index.js
@@ -32,5 +33,11 @@ route.post('/email', async (req, res) => {
     res.json({...req.body ?? {email: "No email transferred"}, message: 'Data submitted'});
     res.end();
 })
+  
+// required middleware to use index.html from public/game/index.html in the server directory
+route.use(express.static('public'));
+// route.use(express.static(path.join(__dirname, 'public')));
+
+// Game runs on http://localhost:8080/game/index.html since the game is in the server/public/game directory
 
 module.exports = route

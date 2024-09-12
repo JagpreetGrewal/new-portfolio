@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import Headers from './Header';
 import MyBody from './Body';
+import MyGame from './Game';
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
   const contentMap = {
     home: {route: "/", path: <Headers />, image: './images/Stock-coding.jpg',},
     about:  {route: "/about", path: <MyBody />, image: './images/Stock-engineering.jpg'},
+    game: {route: "/game", path: <MyGame />, image: './images/Stock-engineering.jpg'},
   }
 
   // This image shows up on mouse hovers.
@@ -29,6 +31,10 @@ function App() {
   const aboutImage = () => {
     setFeaturedContent(contentMap.about.image)
   }
+
+  const aboutGame = () => {
+    setFeaturedContent(contentMap.game.image)
+  }  
   
   // This is async so that the onMouseLeave doesn't leave the link red or something like that.
   // This function ensures the default image displayed below the nav bar updates to the image of the section.
@@ -43,6 +49,10 @@ function App() {
 
   const defaulAboutImage = () => {
     setDefaultContent(contentMap.about.image)
+  }
+
+  const defaulAboutGame = () => {
+    setDefaultContent(contentMap.game.image)
   }
 
   const liClasses = classNames({
@@ -88,9 +98,17 @@ function App() {
               About Me
             </Link>
           </li>
-          {/* <li className="nav-item">
-            <Link to="/projects" className="nav-link">Projects</Link>
-          </li> */}
+          <li className="nav-item">
+            <Link 
+              to={contentMap.game.route} 
+              className="nav-link" 
+              onMouseEnter={aboutGame} 
+              onMouseLeave={featuredContentDefault}
+              onClick={defaulAboutGame}
+            >
+              Play My Game
+            </Link>
+          </li>
         </ul>
       </nav>
       <section 
@@ -107,6 +125,7 @@ function App() {
       <Routes>
         <Route path={contentMap.home.route} element={contentMap.home.path} />
         <Route path={contentMap.about.route} element={contentMap.about.path} />
+        <Route path={contentMap.game.route} element={contentMap.game.path} />
         {/* <Route path="/projects" element={<Projects />} /> */}
       </Routes>
     </Router>    

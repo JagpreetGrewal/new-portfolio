@@ -5,17 +5,17 @@ const route1 = require('./routes/route1')
 const cors = require('cors')
 const bodyParser = require('body-parser');
 
-console.log(app)
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json())
 
-// Middleware to set necessary headers
-app.use((req, res, next) => {
-    res.setHeader('Cross-Origin-Opener-Policy', 'same-origin');
-    res.setHeader('Cross-Origin-Embedder-Policy', 'require-corp');
-    next();
-  });
+
+// app.use(express.static(path.join(__dirname, 'public')));
+
+console.log(app)
+
+
+
+// app.use(express.static(path.join(__dirname, '../client/build')));
   
 //   // Serve the React static files from the build directory
 // app.use(express.static(path.join(__dirname, '../client/build')));
@@ -31,6 +31,7 @@ app.use((req, res, next) => {
 app.use(cors())
 
 app.use('/', route1)
+
 
 app.listen(8080, (err) => {
     if (err) console.log(err);

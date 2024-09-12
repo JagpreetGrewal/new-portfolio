@@ -1,26 +1,10 @@
+import React from "react";
 import "./Body.css"
-
-function GodotGame() {
-    return (
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <iframe
-          src="/game/index.html"
-          title="Godot Game"
-          width="640"
-          height="320"
-          style={{
-            border: 'none',
-            outline: 'none',
-          }}
-          allowFullScreen
-        ></iframe>
-      </div>
-    );
-}
 
 function Experience() {
   const educationItems = [
-    {
+    { /* TODO: Image source link then display? */
+      /* TODO: Date of graduation in top right like in resume? */
       title: 'B.A.Sc. Computer Engineering',
       institution: 'Simon Fraser University',
       link: 'https://www.sfu.ca/',
@@ -126,14 +110,12 @@ function Experience() {
     </div>
   );
 
-}
-  
+} 
 
 export default function MyBody() {
     return (
         <section className="AboutMe">
             <p>Testing 4444!!!!</p>
-            {/* <GodotGame /> */}
             <Experience />
         </section>
     );
