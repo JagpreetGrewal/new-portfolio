@@ -45,14 +45,14 @@ h2 {
 }
 
 .resume-box:hover {
-  background-color: #f0f8ff;
+  background-color: #f0fff0;
   border-color: #007bff;
   transform: translateY(-5px);
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .resume-box h3 {
-  color: #007bff;
+  color: #8e9436;
   margin-bottom: 10px;
 }
 
@@ -79,11 +79,11 @@ h2 {
   border: 1px solid #ddd;
 }
 
-.project-box:hover {
+/* .project-box:hover {
   background-color: #000000;
   color: #fff;
   border-color: #007bff;
-}
+} */
 
 /* Skills container styling */
 .skills-container {
@@ -104,9 +104,9 @@ h2 {
 }
 
 .skill-box:hover {
-  background-color: #007bff;
+  background-color: #7c8503;
   color: #fff;
-  border-color: #007bff;
+  border-color: #7c8503;
 }
 
 /* Responsiveness */

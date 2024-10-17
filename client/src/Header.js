@@ -1,10 +1,11 @@
 import "./Header.css"
-import logo from './logo.svg';
 import axios from 'axios'
 import {useState, useEffect} from 'react'
 
+const myServerURI = process.env.SERVER_URI || 'http://localhost';
+
 const myApiCall = () => {
-    axios.get('http://localhost:8080').then((data) => {
+    axios.get(`${myServerURI}:8080`).then((data) => {
       console.log(data.data)
       console.log(data.status)
       console.log('Test!')
@@ -13,7 +14,7 @@ const myApiCall = () => {
 
 const myEmailCall = (arg) => {
     console.log("Attempting post with arg", arg);
-    axios.post('http://localhost:8080/email',arg ?? 'Nothing sent', { timeout: 5000 }).then((data) => {
+    axios.post(`${myServerURI}:8080/email`,arg ?? 'Nothing sent', { timeout: 5000 }).then((data) => {
       console.log(`Email address is: ${data?.data?.email}`)
       console.log(data.status)
     }).catch(e => {
@@ -23,11 +24,11 @@ const myEmailCall = (arg) => {
 
 export default function Headers() {
     const [myName, setMyName] = useState("");
-    const [nameChanged, setNameChanged] = useState(0);
-    useEffect( () => {
-      setNameChanged(() => nameChanged + 1)
-    }, 
-    [myName])
+    // const [nameChanged, setNameChanged] = useState(0);
+    // useEffect( () => {
+    //   setNameChanged(() => nameChanged + 1)
+    // }, 
+    // [myName])
 
 
     const handleSubmit = (event) => {
@@ -38,7 +39,7 @@ export default function Headers() {
       
         console.log("Email Data:", emailData); // This should now output the correct email value
         myEmailCall({ email: emailData });
-        setMyName(''); //clearing email field after submission
+        setMyName(''); //clearing email field a fter submission
         // myEmailCall({message:'',data: myName.trim()}); 
         console.log('Form submitted');
       };
@@ -50,8 +51,8 @@ export default function Headers() {
             <h3>Hello! I am Jagpreet Grewal!</h3>
             <p className = "Paragraph-header">
             I am recent SFU graduate with a <u>B.A.Sc. in Computer Engineering</u>. 
-            I like reading, working out, travelling, and many other activies. In the future, I plan on completing a Master's degree in Business or in a Big Data field - 
-            right now, I am eager to get into the workplace. I have previous co-op experience with Sierra Wireless and Microserve, where I worked for eight months each.
+            I like reading, working out, travelling, and many other activities. In the future, I plan on completing a Master's degree in Business or in a Big Data field - 
+            right now, I am eager to get into the workplace. I have previous co-op experience with Semtech (Sierra Wireless) and Microserve, where I worked for eight months each.
             </p>
             <form id="myForm" onSubmit={handleSubmit}>
             <label>Alternatively, let me contact you: </label>
@@ -66,9 +67,9 @@ export default function Headers() {
             />
             <input 
                 type="submit" 
-                value="Increment" 
+                value="Submit" 
                 onClick={() => {
-                    setNameChanged(nameChanged + 1); 
+                    // setNameChanged(nameChanged + 1); 
                     // setMyName("Submitted!!!"); 
                     setTimeout(() => {
                         console.log("Timeout over");
@@ -77,11 +78,11 @@ export default function Headers() {
                 onSubmit={handleSubmit}
             />
             </form>  
-            <p><br /></p>
+            {/* <p><br /></p>
             <button onClick = {myApiCall}>Make API call</button>
             <p>Test 13425</p>
             <p>Name: {myName}</p>
-            <p>Times Changed: {nameChanged}</p>
+            <p>Times Changed: {nameChanged}</p> */}
         </header>
         </div>
     );

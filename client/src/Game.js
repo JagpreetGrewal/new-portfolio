@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import "./Game.css"
 
+const myServerURI = process.env.SERVER_URI || 'http://localhost';
+
 function GodotGame() {
     // const [gameHTML, setGameHTML] = useState("");
     const [loading, setLoading] = useState(true); // New state for loading
@@ -9,7 +11,7 @@ function GodotGame() {
     useEffect(() => {
       // Fetch the game index.html file from your server
       axios
-        .get("http://localhost:8080/game/index.html", {
+        .get(`${myServerURI}:8080/game/index.html`, {
           responseType: 'arraybuffer',
           // headers: {
           //   'Cross-Origin-Opener-Policy': 'same-origin',
@@ -73,6 +75,8 @@ function GodotGame() {
               </div>
             ) : (
               <div className="game-container">
+                <h3>Development in progress. Here's the rapid prototype.</h3>
+                <h3>Click on game to control player.</h3>
                 <iframe
                   ref={iframeRef}
                   src="http://localhost:8080/game/index.html"
