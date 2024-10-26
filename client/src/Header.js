@@ -1,18 +1,10 @@
 import "./Header.css"
 import axios from 'axios'
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 
 const myServerURI = process.env.SERVER_URI || 'http://localhost';
 
-const myApiCall = () => {
-    axios.get(`${myServerURI}:8080`).then((data) => {
-      console.log(data.data)
-      console.log(data.status)
-      console.log('Test!')
-    })
-  }
-
-const myEmailCall = (arg) => {
+export const myEmailCall = (arg) => {
     console.log("Attempting post with arg", arg);
     axios.post(`${myServerURI}:8080/email`,arg ?? 'Nothing sent', { timeout: 5000 }).then((data) => {
       console.log(`Email address is: ${data?.data?.email}`)
@@ -23,7 +15,7 @@ const myEmailCall = (arg) => {
   }
 
 export default function Headers() {
-    const [myName, setMyName] = useState("");
+    const [myName, setMyName] = useState('');
     // const [nameChanged, setNameChanged] = useState(0);
     // useEffect( () => {
     //   setNameChanged(() => nameChanged + 1)
@@ -67,6 +59,7 @@ export default function Headers() {
             />
             <input 
                 type="submit" 
+                data-testid="myForm"
                 value="Submit" 
                 onClick={() => {
                     // setNameChanged(nameChanged + 1); 

@@ -11,6 +11,7 @@ function GodotGame() {
     useEffect(() => {
       // Fetch the game index.html file from your server
       axios
+        // TODO: change to client-side (make this local host only with ./game/index.html)
         .get(`${myServerURI}:8080/game/index.html`, {
           responseType: 'arraybuffer',
           // headers: {
@@ -86,6 +87,7 @@ function GodotGame() {
                 ></iframe>
                 {/* Fullscreen Button */}
                 <button
+                  name="fullscreen"
                   className="fullscreen-button"
                   onClick={handleFullscreen}
                 >

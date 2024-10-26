@@ -8,6 +8,7 @@ const { Resend } = require("resend");
 // modified package.json file to allow that
 
 const myResendURI = new Resend(process.env.RESEND_URI)
+const myEmail = process.env.EMAIL_URI || 'dummyemail@email.com'
 
 route.get('/', (req, res) => {
     res.send('Hello from our server!');
@@ -18,7 +19,7 @@ route.post('/email', async (req, res) => {
     // res.send('Data submitted:', {req});
     const { data, error } = await myResendURI.emails.send({
         from: "ACME <onboarding@resend.dev>",
-        to: ["jaggy1111@gmail.com"],
+        to: [`${myEmail}`],
         subject: "Interested contact",
         html: 'Email is: <u>' + JSON.stringify(req.body.email) + ' </u>',
       });
