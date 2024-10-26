@@ -5,17 +5,17 @@ import Headers from './Header';
 import MyBody from './Body';
 import MyGame from './Game';
 
-const NoMatch = () => <div>No match</div>
+export const NoMatch = () => <div>No match</div>
+
+// This holds links to make it easier to change variables, and it's easier to read and write.
+export const contentMap = {
+  home: {route: "/", path: <Headers />, image: './images/Stock-coding.jpg',},
+  about:  {route: "/about", path: <MyBody />, image: './images/Stock-engineering.jpg'},
+  game: {route: "/game", path: <MyGame />, image: './images/Stock-engineering.jpg'},
+  notMatch: {route: "*", path: <NoMatch />, image: './images/Stock-coding.jpg'},
+}
 
 function App() {
-
-  // This holds links to make it easier to change variables, and it's easier to read and write.
-  const contentMap = {
-    home: {route: "/", path: <Headers />, image: './images/Stock-coding.jpg',},
-    about:  {route: "/about", path: <MyBody />, image: './images/Stock-engineering.jpg'},
-    game: {route: "/game", path: <MyGame />, image: './images/Stock-engineering.jpg'},
-    notMatch: {route: "*", path: <NoMatch />, image: './images/Stock-coding.jpg'},
-  }
 
   return (
     <Router>

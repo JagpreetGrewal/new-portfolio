@@ -16,12 +16,6 @@ export const myEmailCall = (arg) => {
 
 export default function Headers() {
     const [myName, setMyName] = useState('');
-    // const [nameChanged, setNameChanged] = useState(0);
-    // useEffect( () => {
-    //   setNameChanged(() => nameChanged + 1)
-    // }, 
-    // [myName])
-
 
     const handleSubmit = (event) => {
         event.preventDefault(); // Prevents the default form submission (page reload)
@@ -52,13 +46,16 @@ export default function Headers() {
             <input 
                 type="email" 
                 name="email"
+                label="email"
+                data-testid="myEmail"
                 className="myInput" 
                 placeholder={myName || "Please type your email..."} 
                 value={myName || ''} // requires || to show placeholder when myName is empty string
                 onChange={(event) => setMyName(event.target.value)}
             />
             <input 
-                type="submit" 
+                type="submit"
+                name="submit" 
                 data-testid="myForm"
                 value="Submit" 
                 onClick={() => {
