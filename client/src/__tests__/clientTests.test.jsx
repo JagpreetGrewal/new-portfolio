@@ -57,7 +57,7 @@ describe("Game component", () => {
       const gameContent = screen.getByText(/Development in progress. Here's the rapid prototype./i);
       expect(gameContent).toBeInTheDocument();
       expect(axios.get).toHaveBeenCalledWith(
-        "http://localhost:8080/game/index.html",
+        "http://localhost:3000/game/index.html",
         { responseType: "arraybuffer" }
       );    
   });
@@ -85,7 +85,7 @@ describe("Game component", () => {
     expect(loadingMessage).toBeInTheDocument();
 
     expect(axios.get).toHaveBeenCalledWith(
-      "http://localhost:8080/game/index.html",
+      "http://localhost:3000/game/index.html",
       { responseType: "arraybuffer" }
     ); 
   });

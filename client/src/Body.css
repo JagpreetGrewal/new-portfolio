@@ -1,5 +1,5 @@
 .AboutMe {
-    background-color: #282c34;
+    background-color: #333845;
     min-height: 50vh;
     display: flex;
     flex-direction: column;
@@ -32,8 +32,8 @@ h2 {
 
 /* Box styling */
 .resume-box {
-  background-color: #f8f9fa;
-  border: 2px solid #ddd;
+  background-color: #ffffff;
+  border: 2px solid #bbb;
   border-radius: 10px;
   padding: 20px;
   width: calc(44% - 40px);
@@ -45,19 +45,19 @@ h2 {
 }
 
 .resume-box:hover {
-  background-color: #f0fff0;
+  background-color: #e6f7ff;
   border-color: #007bff;
   transform: translateY(-5px);
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .resume-box h3 {
-  color: #8e9436;
+  color: #6b8e23;
   margin-bottom: 10px;
 }
 
 .resume-box p {
-  color: #666;
+  color: #333;
   margin: 5px 0;
 }
 
@@ -70,7 +70,7 @@ h2 {
 }
 
 .project-box {
-  background-color: #eee; /* background color for the bullet point description */
+  background-color: #eeeeee; /* background color for the bullet point description */
   border-radius: 5px;
   padding: 5px 10px;
   font-size: 14px;
@@ -104,9 +104,9 @@ h2 {
 }
 
 .skill-box:hover {
-  background-color: #7c8503;
+  background-color: #66a113;
   color: #fff;
-  border-color: #7c8503;
+  border-color: #66a113;
 }
 
 /* Responsiveness */
