@@ -34,11 +34,19 @@ export default function Headers() {
         <div className="App">
         <header className="App-header">
             {/* <img src={logo} className="App-logo" alt="logo" /> */}
-            <h3>Hello! I am Jagpreet Grewal!</h3>
+            <h3>Hello! I am Jagpreet Grewal <span class="wave">👋</span></h3>
+            <img src="./images/May2024SFUGraduation_Pic1.jpg" alt='Graduation' class='graduation'></img>
             <p className = "Paragraph-header">
             I am recent SFU graduate with a <u>B.A.Sc. in Computer Engineering</u>. 
-            I like reading, working out, travelling, and many other activities. In the future, I plan on completing a Master's degree in Business or in a Big Data field - 
-            right now, I am eager to get into the workplace. I have previous co-op experience with Semtech (Sierra Wireless) and Microserve, where I worked for eight months each.
+            I like reading, running, working out, travelling, and many other activities. In the future, I plan on completing a Master's degree in Business or in a Big Data field - 
+            right now, I am eager to get into the workplace.
+            </p>
+            <p>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+            <a href="https://www.linkedin.com/in/jagpreet-g-587977105/" class="fa fa-linkedin" target="_blank" rel="noopener noreferrer"></a> 
+            <a href="mailto: Jagpreet Grewal<j.grewal.official@gmail.com>" class="fa fa-google" target="_blank" rel="noopener noreferrer"></a>
+            <a href="tel:778-867-9428" class="fa fa-phone" target="_blank" rel="noopener noreferrer"></a>
+            <a href="https://github.com/JagpreetGrewal" class="fa fa-github" target="_blank" rel="noopener noreferrer"></a>    
             </p>
             <form id="myForm" onSubmit={handleSubmit}>
             <label>Alternatively, let me contact you: </label>
@@ -67,7 +75,8 @@ export default function Headers() {
                   }}
                 onSubmit={handleSubmit}
             />
-            </form>  
+            </form> 
+            <p><br></br></p>
             {/* <p><br /></p>
             <button onClick = {myApiCall}>Make API call</button>
             <p>Test 13425</p>
