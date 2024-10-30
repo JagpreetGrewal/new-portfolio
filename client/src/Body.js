@@ -41,7 +41,7 @@ function Experience() {
       title: 'My Portfolio',
       descriptions: ['Developed an interactive MERN-stack portfolio website showcasing my skills and projects, including a custom GODOT mini-game offering 3 minutes of free gameplay to enhance visitor engagement.', 
         'Improved software reliability by identifying and resolving bugs, achieving 93% coverage on server- and client-side code with Jest unit tests'],
-      duration: 'November 2023 - April 2024',
+      duration: 'September 2024 - October 2024',
       link: 'https://github.com/JagpreetGrewal/new-portfolio',
       skills: ['ReactJS', 'Node.js', 'Express', 'MongoDB', 'Axios', 'Resend', 'Heroku', 'Netlify', 'CSS', 'GODOT', 'Github', 'REST APIs'],
     },
