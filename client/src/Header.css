@@ -48,7 +48,8 @@
   .Paragraph-header {
     color: white;
     justify-content: center;
-    width: 150vh;
+    width: calc(44% - 40px);
+    min-width: 300px;
     text-align: justify;
     text-justify: inter-word;
   }
