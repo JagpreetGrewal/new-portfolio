@@ -15,6 +15,7 @@ body {
   
   .nav-list {
     display: flex;
+    align-items: center;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -28,6 +29,8 @@ body {
   .nav-link {
     display: block;
     padding: 10px 20px;
+    /* height: calc(24% - 4px); */
+    min-height: 20px; /* Consistent minimum height for all links */
     background-color: #444; /* Darker shade for the link boxes */
     color: white;
     text-transform: uppercase;
@@ -100,6 +103,21 @@ body {
       opacity: 100%;
     }
   }
+
+  /* For mobile portrait mode. Mobile landscape mode should work fine if it's treated like a desktop.*/
+  @media (orientation: portrait) {
+    .nav-list {
+      flex-direction: column;
+    }
+    .nav-item {
+      margin: 2px 10px;
+    }
+  }
+
+  /* in case landscape orientation requires specific changes. Everything is already landscape as default though. */
+  /* @media (orientation: landscape) {
+
+  } */
   
 
 
