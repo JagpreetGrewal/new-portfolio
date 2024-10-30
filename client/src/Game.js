@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import "./Game.css"
 
-const myServerURI = process.env.SERVER_URI || 'http://localhost'; // put the netlify url here
+// const myServerURI = process.env.SERVER_URI || 'http://localhost'; // put the netlify url here
 
 function GodotGame() {
     // const [gameHTML, setGameHTML] = useState("");
@@ -12,7 +12,7 @@ function GodotGame() {
       // Fetch the game index.html file from your server
       axios
         // TODO: change to client-side (make this local host only with ./game/index.html)
-        .get(`${myServerURI}:3000/game/index.html`, {
+        .get(`./game/index.html`, {
           responseType: 'arraybuffer',
           // headers: {
           //   'Cross-Origin-Opener-Policy': 'same-origin',
@@ -80,7 +80,7 @@ function GodotGame() {
                 <h3>Click on game to control player.</h3>
                 <iframe
                   ref={iframeRef}
-                  src={`${myServerURI}:3000/game/index.html`}
+                  src={`./game/index.html`}
                   title="Godot Game"
                   className="game-iframe"
                   allowFullScreen

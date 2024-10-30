@@ -82,4 +82,5 @@ route.use(express.static('public'));
 
 // Game runs on http://localhost:8080/game/index.html since the game is in the server/public/game directory
 
-module.exports = { route, addInterestedEmail }
+// module.exports = { route, addInterestedEmail }
+module.exports = route

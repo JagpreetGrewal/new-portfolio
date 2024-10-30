@@ -2,11 +2,13 @@ import "./Header.css"
 import axios from 'axios'
 import {useState} from 'react'
 
-const myServerURI = process.env.SERVER_URI || 'http://localhost';
+
+const PORT = 8080;
+const myServerURI = process.env.SERVER_URI || `http://localhost:${PORT}`;
 
 export const myEmailCall = (arg) => {
     console.log("Attempting post with arg", arg);
-    axios.post(`${myServerURI}:8080/email`,arg ?? 'Nothing sent', { timeout: 5000 }).then((data) => {
+    axios.post(`${myServerURI}/email`,arg ?? 'Nothing sent', { timeout: 5000 }).then((data) => {
       console.log(`Email address is: ${data?.data?.email}`)
       console.log(data.status)
     }).catch(e => {
