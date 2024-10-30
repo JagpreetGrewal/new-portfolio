@@ -51,7 +51,7 @@ function GodotGame() {
     };
   
       return (
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', 'max-width': 'calc(80%)' }}>
           <div>
             {loading ? (
               <div style={{ textAlign: 'center', padding: '20px' }}>
