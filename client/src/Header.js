@@ -5,7 +5,7 @@ import {useState} from 'react'
 
 
 const PORT = 8080;
-const myServerURI = process.env.REACT_APP_SERVER_URI //|| `http://localhost:${PORT}`;
+const myServerURI = process.env.REACT_APP_SERVER_URI || `http://localhost:${PORT}`;
 
 export const myEmailCall = (arg) => {
     console.log("Attempting post with arg", arg);
