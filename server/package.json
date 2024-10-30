@@ -29,5 +29,8 @@
   },
   "devDependencies": {
     "@shelf/jest-mongodb": "^4.3.2"
+  },
+  "engines": {
+    "node": "21.6.0"
   }
 }
