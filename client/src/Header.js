@@ -32,7 +32,7 @@ export default function Headers() {
         // myEmailCall({message:'',data: myName.trim()}); 
         console.log('Form submitted');
       };
-
+    
     return(
         <div className="App">
         <header className="App-header">
@@ -46,10 +46,12 @@ export default function Headers() {
             </p>
             <p>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-            <a href="https://www.linkedin.com/in/jagpreet-g-587977105/" class="fa fa-linkedin" target="_blank" rel="noopener noreferrer"></a> 
-            <a href="mailto: Jagpreet Grewal<j.grewal.official@gmail.com>" class="fa fa-google" target="_blank" rel="noopener noreferrer"></a>
+            {/* eslint-disable */}
+            <a href="https://www.linkedin.com/in/jagpreet-g-587977105/" class="fa fa-linkedin" target="_blank" rel="noopener noreferrer"></a>
+            <a href="mailto: Jagpreet Grewal<j.grewal.official@gmail.com>" class="fa fa-google" target="_blank" rel="noopener noreferrer"></a> 
             <a href="tel:778-867-9428" class="fa fa-phone" target="_blank" rel="noopener noreferrer"></a>
-            <a href="https://github.com/JagpreetGrewal" class="fa fa-github" target="_blank" rel="noopener noreferrer"></a>    
+            <a href="https://github.com/JagpreetGrewal" class="fa fa-github" target="_blank" rel="noopener noreferrer"></a>
+            {/* eslint-enable */}
             </p>
             <form id="myForm" onSubmit={handleSubmit}>
             <label>Alternatively, let me contact you: </label>
