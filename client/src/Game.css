@@ -23,7 +23,9 @@
     border: none;
     outline: none;
     width: 100vh;
+    max-width: calc(80%);
     height: 50vh;
+    max-height: calc(80%);
     background-color: #333;
     border: 2px solid gold;
   }
