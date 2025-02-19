@@ -1,7 +1,8 @@
 import "./Header.css"
 import axios from 'axios'
 import {useState} from 'react'
-
+import Typist from 'react-typist-component';
+import React from "react";
 
 
 const PORT = 8080;
@@ -15,10 +16,45 @@ export const myEmailCall = (arg) => {
     }).catch(e => {
         console.log(e);
     })
-  }
+}
+
+const aboutMeDescriptions = [
+    <>
+      I am a Back-End Software Engineer at <u>LM West Financial Corp.</u>
+    </>,    
+    <>
+      I am a SFU undergraduate with a <u>B.A.Sc. in Computer Engineering.</u>
+    </>,
+    <>
+      I am a <u>reader</u>, <u>jogger</u>, and <u>traveler</u>.
+    </>,
+    <>
+      I will possess a <u>Master's in Engineering</u> one day.
+    </>,    
+];
+
+/* Converts jsx objects to plain text to determine their length later on (via .length) */
+const extractTextFromJSX = (jsx) => {
+    return React.Children.toArray(jsx)
+      .map(child => {
+        if (typeof child === "string") return child;
+        if (React.isValidElement(child)) return extractTextFromJSX(child.props.children);
+        return "";
+      })
+      .join("");
+  };
 
 export default function Headers() {
     const [myName, setMyName] = useState('');
+    const [index, setIndex] = useState(0);
+
+    const handleChange = () => {
+        if (index + 1 === aboutMeDescriptions.length) {
+          setIndex(0);
+        } else {
+          setIndex(index + 1);
+        }
+    };    
 
     const handleSubmit = (event) => {
         event.preventDefault(); // Prevents the default form submission (page reload)
@@ -40,10 +76,23 @@ export default function Headers() {
             <h3>Hello! I am Jagpreet Grewal <span class="wave">👋</span></h3>
             <img src="./images/May2024SFUGraduation_Pic1.jpg" alt='Graduation' class='graduation'></img>
             <p className = "Paragraph-header">
-            I am recent SFU graduate with a <u>B.A.Sc. in Computer Engineering</u>. 
-            I like reading, running, working out, travelling, and many other activities. In the future, I plan on completing a Master's degree in Business or in a Big Data field - 
-            right now, I am eager to get into the workplace.
+            <Typist 
+                typingDelay={100}
+                backspaceDelay={25} 
+                cursor={<span className='cursor'>|</span>} 
+                loop={true}
+                onTypingDone={handleChange}
+                key={index}
+            >
+            {aboutMeDescriptions[index]}
+            {/* I like reading, running, working out, travelling, and many other activities. In the future, I plan on completing a Master's degree in Business or in a Big Data field - 
+            right now, I am eager to get into the workplace. */}
+            <Typist.Delay ms={2000} />
+            <Typist.Backspace count={extractTextFromJSX(aboutMeDescriptions[index]).length - 2}/>
+            {/* <Typist.Delay ms={1500} /> */}
+            </Typist>
             </p>
+
             <p>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
             {/* eslint-disable */}

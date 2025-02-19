@@ -19,7 +19,7 @@ function App() {
 
   return (
     <Router>
-    <nav className="navbar">
+    {/* <nav className="navbar">
       <ul className="nav-list">
         <li className="nav-item">
             <Link 
@@ -48,14 +48,17 @@ function App() {
         </ul>
       </nav>
 
-      
-      <Routes>
+       */}
+      {/* <Routes>
         <Route path={contentMap.home.route} element={contentMap.home.path} />
         <Route path={contentMap.about.route} element={contentMap.about.path} />
         <Route path={contentMap.game.route} element={contentMap.game.path} />
-        <Route path={contentMap.notMatch.route} element={contentMap.notMatch.path}/>
-        {/* <Route path="/projects" element={<Projects />} /> */}
-      </Routes>
+        <Route path={contentMap.notMatch.route} element={contentMap.notMatch.path}/> */}
+        {/* <Route path="/projects" element={<Projects />} />  */}
+      {/* </Routes> */}
+    {contentMap.home.path} 
+    {contentMap.about.path}
+    {/* {contentMap.game.path} */}
     </Router>    
   );
 }
