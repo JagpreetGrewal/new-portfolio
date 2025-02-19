@@ -45,13 +45,37 @@
     color: #4b4949; /* Tailwind red-50 */
   }
 
-  .Paragraph-header {
-    color: white;
-    justify-content: center;
+.Paragraph-header {
+  color: white;
+  justify-content: center;
+  width: calc(44% - 40px);
+  min-width: 300px;
+  text-align: justify;
+  text-justify: inter-word;
+  font-family: "Lucida Console"
+}
+
+  .Paragraph-header h3 { 
+    text-align: center;
+    font-family: "Papyrus";
+  }
+
+  .Paragraph-header img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: calc(44% - 40px);
-    min-width: 300px;
-    text-align: justify;
-    text-justify: inter-word;
+    border-style: solid;
+    border-color:white;
+  }
+
+  .Paragraph-header .centered-paragraph {
+    text-align: center;
+  }
+
+  .Paragraph-header form {
+    justify-content: center;
+    text-align: center;
   }
 
 .fa {

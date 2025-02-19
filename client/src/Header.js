@@ -73,9 +73,10 @@ export default function Headers() {
         <div className="App">
         <header className="App-header">
             {/* <img src={logo} className="App-logo" alt="logo" /> */}
+            <div className="Paragraph-header">
             <h3>Hello! I am Jagpreet Grewal <span class="wave">👋</span></h3>
-            <img src="./images/May2024SFUGraduation_Pic1.jpg" alt='Graduation' class='graduation'></img>
-            <p className = "Paragraph-header">
+            <img src="./images/May2024SFUGraduation_Pic1.jpg" alt='Graduation'></img>
+            <p>
             <Typist 
                 typingDelay={100}
                 backspaceDelay={25} 
@@ -93,7 +94,7 @@ export default function Headers() {
             </Typist>
             </p>
 
-            <p>
+            <p className="centered-paragraph">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
             {/* eslint-disable */}
             <a href="https://www.linkedin.com/in/jagpreet-g-587977105/" class="fa fa-linkedin" target="_blank" rel="noopener noreferrer"></a>
@@ -131,6 +132,7 @@ export default function Headers() {
             />
             </form> 
             <p><br></br></p>
+            </div>
             {/* <p><br /></p>
             <button onClick = {myApiCall}>Make API call</button>
             <p>Test 13425</p>
