@@ -1,9 +1,9 @@
 import "./Header.css"
 import axios from 'axios'
-import {useState} from 'react'
+import {useState, useEffect, useRef} from 'react'
 import Typist from 'react-typist-component';
 import React from "react";
-
+// import { Flex, Text, useColorMode, Box, Image } from '@chakra-ui/react';
 
 const PORT = 8080;
 const myServerURI = process.env.REACT_APP_SERVER_URI || `http://localhost:${PORT}`;
@@ -20,10 +20,10 @@ export const myEmailCall = (arg) => {
 
 const aboutMeDescriptions = [
     <>
-      I am a Back-End Software Engineer at <u>LM West Financial Corp.</u>
+      I am a Back-End Software Engineer at <u>LM West Financial Corp</u>.
     </>,    
     <>
-      I am a SFU undergraduate with a <u>B.A.Sc. in Computer Engineering.</u>
+      I am a SFU undergraduate with a <u>B.A.Sc. in Computer Engineering</u>.
     </>,
     <>
       I am a <u>reader</u>, <u>jogger</u>, and <u>traveler</u>.
@@ -47,6 +47,7 @@ const extractTextFromJSX = (jsx) => {
 export default function Headers() {
     const [myName, setMyName] = useState('');
     const [index, setIndex] = useState(0);
+    // const { colorMode } = useColorMode();
 
     const handleChange = () => {
         if (index + 1 === aboutMeDescriptions.length) {
@@ -54,7 +55,29 @@ export default function Headers() {
         } else {
           setIndex(index + 1);
         }
-    };    
+    }; 
+    const targetRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+              } else {
+                entry.target.classList.remove('visible');
+              }
+            });
+          },
+          { threshold: 0.05 }
+        );
+    
+        observer.observe(targetRef.current);
+    
+        return () => {
+          observer.disconnect();
+        };
+      }, []);    
 
     const handleSubmit = (event) => {
         event.preventDefault(); // Prevents the default form submission (page reload)
@@ -70,7 +93,7 @@ export default function Headers() {
       };
     
     return(
-        <div className="App">
+        <div className="App" ref={targetRef}>
         <header className="App-header">
             {/* <img src={logo} className="App-logo" alt="logo" /> */}
             <div className="Paragraph-header">

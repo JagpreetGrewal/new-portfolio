@@ -7,18 +7,39 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
+    /* width: 100%; */
+
   }
+
+
 
 /* General layout */
 .resume-container {
   padding: 20px;
   max-width: calc(62%);
   /* max-width: 1200px; */
-  margin: 0 auto;
+  margin: 0 auto; 
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;  
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  font-family: "Lucida Console";     
+}
+
+.resume-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.resume-container.visible3 {
+  opacity: 1;
 }
 
 h2 {
-  color: #fdfdfd;
+  /* color: #fdfdfd; */
   margin-bottom: 20px;
   font-size: 24px;
 }
@@ -26,31 +47,62 @@ h2 {
 /* Section layout */
 .resume-section {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  gap: 20px;
+  /* gap: 20px; */
   justify-content: space-around;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  margin: 0px;
+  box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.2);
 }
 
 /* Box styling */
 .resume-box {
-  background-color: #ffffff;
-  border: 2px solid #bbb;
-  border-radius: 10px;
+  /* background-color: #ffffff; */
+  /* border: 2px solid #bbb; */
+  /* border-radius: 10px; */
   padding: 20px;
-  width: calc(44% - 40px);
+  width: calc(54% - 40px);
   min-width: 300px;
   text-decoration: none;
   transition: all 0.3s ease;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid gray;
   position: relative;
 }
 
-.resume-box:hover {
+.resume-header {
+  width: 100%;
+  background-color: #222;
+  color: white;
+  padding: 15px;
+  border: none;
+  display: flex;
+  margin: 0px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.resume-header:hover {
+  background-color: #333;
+}
+
+.resume-header.active {
+  background-color: #007bff;
+  /* width: 100%; Ensure the button spans the full width */
+}
+
+/* .resume-box:hover {
   background-color: #e6f7ff;
   border-color: #007bff;
   transform: translateY(-5px);
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
-}
+} */
 
 .resume-box h3 {
   color: #6b8e23;
@@ -60,6 +112,59 @@ h2 {
 .resume-box p {
   color: #333;
   margin: 5px 0;
+}
+
+/* Expand/collapse icon */
+.icon {
+  font-size: 18px;
+}
+
+/* Accordion content (hidden by default) */
+.resume-content {
+  background-color: #111;
+  color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  padding: 0 15px;
+  /* gap: 1px;   */
+}
+
+/* Show content when active */
+.resume-content.open {
+  max-height: 200px;
+  padding: 15px;
+}
+
+.resume-item {
+  border-bottom: 1px solid rgb(255, 255, 255);
+  border-top: 1px solid rgb(255, 255, 255);
+}
+
+/* Prevent changes to <a> links */
+.resume-item a {
+  all: unset; /* Removes all inherited styles */
+  color: inherit; /* Keeps the original color */
+  text-decoration: none;
+}
+
+/* Job title in details */
+.job-title {
+  color: #ffffff;
+  font-family: "Lucida Console"; 
+  /* font-weight: bold; */
+}
+
+/* Job period */
+.job-period {
+  color: rgb(255, 255, 255);
+  /* font-style: italic; */
+}
+
+/* Job details */
+.job-details {
+  margin-top: 5px;
+  color: rgb(255, 255, 255);
 }
 
 /* Projects (and experience) container styling */
@@ -105,7 +210,7 @@ h2 {
 }
 
 .skill-box:hover {
-  background-color: #66a113;
+  background-color: #0e1801;
   color: #fff;
   border-color: #66a113;
 }

@@ -1,5 +1,12 @@
 .App {
     text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  /* This css class gets added to every css class visible in Headers. It cannot be part of an existing class. */
+  .visible {
+    opacity: 1;
   }
   
   .App-logo {
