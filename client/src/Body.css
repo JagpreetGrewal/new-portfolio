@@ -132,7 +132,7 @@ h2 {
 
 /* Show content when active */
 .resume-content.open {
-  max-height: 200px;
+  max-height: 400px;
   padding: 15px;
 }
 
@@ -164,6 +164,7 @@ h2 {
 /* Job details */
 .job-details {
   margin-top: 5px;
+  margin-left: 5px;
   color: rgb(255, 255, 255);
 }
 

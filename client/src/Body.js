@@ -9,7 +9,7 @@ function Experience() {
       title: 'B.A.Sc. Computer Engineering',
       institution: 'Simon Fraser University',
       link: 'https://www.sfu.ca/',
-      // description: 'Graduated'
+      description: 'May 2024'
     },
   ];
 
@@ -20,6 +20,7 @@ function Experience() {
       duration: 'November 2024 - Present',
       link: '#',
       descriptions: [],
+      skills: ['Python', 'Github', 'Excel'],
     },    
     {
       title: 'Embedded Software Engineer, Co-op',
@@ -30,6 +31,8 @@ function Experience() {
         'Refactored a C++ data logging tool to securely package and email logs, implementing batch emailing and sanity testing, reducing execution frequency from six times per day to once per day',
         'Improved test setup and measurement tools in C#, implementing multi-threading to display real-time visual data, ensuring accurate data and instructions for workers in factories',
       ],
+      // descriptions: [],
+      skills: ['Python', 'C++', 'C#', 'Github', 'SCPI', 'RsCmwGprfMeas','YAML', 'Batch Script'],
     },
     {
       title: 'Front-End Software Engineer (Part-time)',
@@ -38,6 +41,7 @@ function Experience() {
       link: 'https://web.archive.org/web/20220517173253/https://atpmortgage.com/',
       descriptions: ['Reduced external contractor costs by $10000 per annum by streamlining routine website updates and improving client-worker communication',
       ],
+      skills: ['WordPress', 'PHP'],
     },    
     {
       title: 'Deployment Engineer, Co-op',
@@ -46,6 +50,7 @@ function Experience() {
       link: 'https://www.microserve.ca/',
       descriptions: ['Reduced installation time by 20% by implementing Batch and Python scripts that automatically queried and saved hardware information to an online database',
       ],
+      skills: ['Python', 'Batch Script'],
     },    
   ];
 
@@ -152,8 +157,8 @@ function Experience() {
                 }`}
               >
                 <a href={item.link} key={index} target="_blank" rel="noopener noreferrer">
-                  <p className="job-period">{item.institution}</p>
-                  <p className="job-period">{item.description}</p>
+                  <p className="job-period" style={{"text-decoration": "underline"}}>{item.institution}</p>
+                  <p className="job-period"><em>{item.description}</em></p>
                 </a>
               </div>
             </div>
@@ -179,13 +184,18 @@ function Experience() {
                   }`}
                 >
                   <a href={item.link} key={index} target="_blank" rel="noopener noreferrer">
-                    <p className="job-period">{item.institution}</p>
-                    <p className="job-period">{item.duration}</p>
+                    <p className="job-period" style={{"text-decoration": "underline"}}>{item.institution}</p>
+                    <p className="job-period"><em>{item.duration}</em></p>
                     <div className="job-details">
                       <p>{item.descriptions.map( (description, descriptionIndex) => (
                         <li key={descriptionIndex}>{description}</li>
                       ) )}</p>
                     </div>
+                    <div className="skills-container">
+                    {item?.skills.map((skill, skillIndex) => (
+                      <span key={skillIndex} className="skill-box">{skill}</span>
+                    ))}
+                    </div>                    
                   </a>
                 </div>
               </div>
@@ -212,7 +222,7 @@ function Experience() {
               }`}
               >
                 <a href={item.link} key={index} target="_blank" rel="noopener noreferrer">
-                  <p className="job-period">{item.duration}</p>
+                  <p className="job-period"><em>{item.duration}</em></p>
                   <div className="job-details">
                     <p>{item.descriptions.map( (description, descriptionIndex) => (
                       <li key={descriptionIndex} >{description}</li>

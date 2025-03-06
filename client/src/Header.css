@@ -2,6 +2,10 @@
     text-align: center;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   /* This css class gets added to every css class visible in Headers. It cannot be part of an existing class. */
@@ -21,14 +25,17 @@
   }
   
   .App-header {
-    background-color: #282c34;
+    background-color: #333;
     min-height: 50vh;
+    width: calc(62%);
+    padding:20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
+    position: relative;
   }
   
   .App-link {
@@ -55,7 +62,7 @@
 .Paragraph-header {
   color: white;
   justify-content: center;
-  width: calc(44% - 40px);
+  width: calc(64% - 40px);
   min-width: 300px;
   text-align: justify;
   text-justify: inter-word;
@@ -64,7 +71,7 @@
 
   .Paragraph-header h3 { 
     text-align: center;
-    font-family: "Papyrus";
+    /* font-family: "Papyrus"; */
   }
 
   .Paragraph-header img {
