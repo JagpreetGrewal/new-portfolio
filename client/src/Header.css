@@ -6,6 +6,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
+    max-width: 100%;
   }
 
   /* This css class gets added to every css class visible in Headers. It cannot be part of an existing class. */

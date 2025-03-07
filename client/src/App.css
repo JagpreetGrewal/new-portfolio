@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    margin: 0;
+    margin: auto auto; /* Keep body centered*/
     padding: 0;
     background-color: #444; /* Light background for modern feel */
   }
