@@ -1,12 +1,13 @@
 .AboutMe {
-    background-color: #333845;
-    min-height: 50vh;
+    background-color: #333;
+    /* min-height: 50vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
+    position: relative;
     /* width: 100%; */
 
   }
@@ -17,8 +18,9 @@
 .resume-container {
   padding: 20px;
   max-width: calc(62%);
-  /* max-width: 1200px; */
-  margin: 0 auto; 
+  
+  /* Set both the left and right margin to auto to center the container */
+  margin: auto auto;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;  
   padding: 20px;
@@ -59,10 +61,10 @@
 }
 
 /* Box styling */
-.resume-box {
-  /* background-color: #ffffff; */
-  /* border: 2px solid #bbb; */
-  /* border-radius: 10px; */
+/* .resume-box {
+  /* background-color: #ffffff; 
+  /* border: 2px solid #bbb; 
+  /* border-radius: 10px; 
   padding: 20px;
   width: calc(54% - 40px);
   min-width: 300px;
@@ -71,7 +73,7 @@
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid gray;
   position: relative;
-}
+} */
 
 .resume-header {
   width: 100%;
