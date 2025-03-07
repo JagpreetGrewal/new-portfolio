@@ -28,7 +28,7 @@
 }
 
 .resume-title {
-  font-size: 24px;
+  font-size: calc(9px + 2vmin);
   font-weight: bold;
   margin-bottom: 20px;
   width: 100%;
@@ -38,11 +38,11 @@
   opacity: 1;
 }
 
-h2 {
-  /* color: #fdfdfd; */
+/* h2 {
+  /* color: #fdfdfd; 
   margin-bottom: 20px;
   font-size: 24px;
-}
+} */
 
 /* Section layout */
 .resume-section {
@@ -83,7 +83,8 @@ h2 {
   margin: 0px;
   justify-content: space-between;
   align-items: center;
-  font-size: 16px;
+  /* font-size: 16px; */
+  font-size: calc(2px + 1.5vmin);
   cursor: pointer;
   transition: background 0.3s ease;
 }
@@ -116,7 +117,8 @@ h2 {
 
 /* Expand/collapse icon */
 .icon {
-  font-size: 18px;
+  /* font-size: 18px; */
+  font-size: calc(2px + 1.5vmin);
 }
 
 /* Accordion content (hidden by default) */
@@ -127,12 +129,13 @@ h2 {
   overflow: hidden;
   transition: max-height 0.3s ease-out, padding 0.3s ease-out;
   padding: 0 15px;
+  font-size: calc(9px + 0.6vmin);
   /* gap: 1px;   */
 }
 
 /* Show content when active */
 .resume-content.open {
-  max-height: 400px;
+  max-height: 1000%;
   padding: 15px;
 }
 
@@ -169,22 +172,22 @@ h2 {
 }
 
 /* Projects (and experience) container styling */
-.projects-container {
+/* .projects-container {
   margin-top: 10px;
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-}
+} */
 
-.project-box {
-  background-color: #eeeeee; /* background color for the bullet point description */
+/* .project-box {
+  background-color: #eeeeee; /* background color for the bullet point description 
   border-radius: 5px;
   padding: 5px 10px;
   font-size: 14px;
   color: #333;
   transition: all 0.3s ease;
   border: 1px solid #ddd;
-}
+} */
 
 /* .project-box:hover {
   background-color: #000000;
@@ -204,7 +207,8 @@ h2 {
   background-color: #000000;
   border-radius: 5px;
   padding: 5px 10px;
-  font-size: 14px;
+  /* font-size: 14px; */
+  font-size: calc(2px + 1.3vmin);
   color: #ffffff;
   transition: all 0.3s ease;
   border: 1px solid #ddd;
@@ -227,7 +231,7 @@ h2 {
   .resume-box {
     width: calc(100% - 40px);
   }
-  .resume-header {
-    font-size: 12px;
+  .resume-container {
+    max-width: 100%;
   }
 }
