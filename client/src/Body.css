@@ -105,7 +105,7 @@
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
 } */
 
-.resume-box h3 {
+/* .resume-box h3 {
   color: #6b8e23;
   margin-bottom: 10px;
 }
@@ -113,7 +113,7 @@
 .resume-box p {
   color: #333;
   margin: 5px 0;
-}
+} */
 
 /* Expand/collapse icon */
 .icon {
@@ -222,15 +222,15 @@
 
 /* Responsiveness */
 @media (max-width: 768px)  or (orientation: landscape) {
-  .resume-box {
+  /* .resume-box {
     width: calc(50% - 40px);
-  }
+  } */
 }
 
 @media (max-width: 480px) or (orientation: portrait) {
-  .resume-box {
-    width: calc(100% - 40px);
-  }
+  /* .resume-box {
+    width: 100%;
+  } */
   /* .resume-header {
 
   } */
