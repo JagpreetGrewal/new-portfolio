@@ -63,7 +63,7 @@
   color: white;
   justify-content: center;
   width: calc(64% - 40px);
-  min-width: 300px;
+  /* min-width: 300px; */
   text-align: justify;
   text-justify: inter-word;
   font-family: "Lucida Console"
@@ -153,4 +153,17 @@
   height: 375px; 
   border-style: solid;
   border-color:white;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .Paragraph-header {
+    width: calc(50% - 40px);
+  }
+}
+
+@media (max-width: 480px) {
+  .Paragraph-header {
+    width: calc(100% - 40px);
+  }
 }

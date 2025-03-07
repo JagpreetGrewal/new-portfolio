@@ -217,14 +217,17 @@ h2 {
 }
 
 /* Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 768px)  or (orientation: landscape) {
   .resume-box {
     width: calc(50% - 40px);
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480px) or (orientation: portrait) {
   .resume-box {
     width: calc(100% - 40px);
+  }
+  .resume-header {
+    font-size: 12px;
   }
 }
