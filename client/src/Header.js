@@ -45,7 +45,7 @@ const extractTextFromJSX = (jsx) => {
   };
 
 export default function Headers() {
-    const [myName, setMyName] = useState('');
+    // const [myName, setMyName] = useState('');
     const [index, setIndex] = useState(0);
     // const { colorMode } = useColorMode();
 
@@ -79,18 +79,18 @@ export default function Headers() {
         };
       }, []);    
 
-    const handleSubmit = (event) => {
-        event.preventDefault(); // Prevents the default form submission (page reload)
-        // Add your API call or any other logic here
-        const formData = new FormData(event.target);
-        const emailData = formData.get('email'); // Use the 'name' attribute to get the value
+    // const handleSubmit = (event) => {
+    //     event.preventDefault(); // Prevents the default form submission (page reload)
+    //     // Add your API call or any other logic here
+    //     const formData = new FormData(event.target);
+    //     const emailData = formData.get('email'); // Use the 'name' attribute to get the value
       
-        console.log("Email Data:", emailData); // This should now output the correct email value
-        myEmailCall({ email: emailData });
-        setMyName(''); //clearing email field a fter submission
-        // myEmailCall({message:'',data: myName.trim()}); 
-        console.log('Form submitted');
-      };
+    //     console.log("Email Data:", emailData); // This should now output the correct email value
+    //     myEmailCall({ email: emailData });
+    //     setMyName(''); //clearing email field a fter submission
+    //     // myEmailCall({message:'',data: myName.trim()}); 
+    //     console.log('Form submitted');
+    //   };
     
     return(
         <div className="App" ref={targetRef}>
