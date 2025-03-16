@@ -64,6 +64,7 @@
 .Paragraph-header {
   color: white;
   justify-content: center;
+  /* justify-content: left; */
   width: calc(64% - 40px);
   /* min-width: 300px; */
   text-align: justify;
@@ -127,7 +128,7 @@
 /* Responsiveness */
 @media (max-width: 768px) {
   .Paragraph-header {
-    width: calc(50% - 40px);
+    width: calc(80% - 40px);
   }
 }
 

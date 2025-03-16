@@ -241,8 +241,8 @@ function Experience() {
           ))}
         </div>
         <br></br><br></br>
-
-        <p style={{"text-align":"center"}}>Coded and Designed by Jagpreet Grewal</p>
+        
+        <p style={{"text-align":"center", "font-size": "calc(10px + 1vmin)"}}>Coded and Designed by Jagpreet Grewal</p>
       </div>
     </div>
   );
