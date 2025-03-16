@@ -165,7 +165,8 @@ function Experience() {
             </div>
           ))}
         </div>
-        
+        <br></br><br></br>
+
         <h2 className="resume-title">Experience</h2>
         <div className="resume-section">
             {experienceItems.map((item, index) => (
@@ -202,7 +203,7 @@ function Experience() {
               </div>
             ))}
         </div>
-
+        <br></br><br></br>
 
         <h2 className="resume-title">Projects</h2>
         <div className="resume-section">
@@ -239,6 +240,9 @@ function Experience() {
             </div>
           ))}
         </div>
+        <br></br><br></br>
+
+        <p style={{"text-align":"center"}}>Coded and Designed by Jagpreet Grewal</p>
       </div>
     </div>
   );
