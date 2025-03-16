@@ -130,6 +130,10 @@
   .Paragraph-header {
     width: calc(80% - 40px);
   }
+
+  .Paragraph-header img{
+    width: calc(40%);
+  }  
 }
 
 @media (max-width: 480px) {
