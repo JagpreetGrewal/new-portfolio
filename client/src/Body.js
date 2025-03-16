@@ -6,7 +6,7 @@ function Experience() {
   const educationItems = [
     { /* TODO: Image source link then display? */
       /* TODO: Date of graduation in top right like in resume? */
-      title: 'B.A.Sc. Computer Engineering',
+      title: 'B.A.Sc. in Computer Engineering',
       institution: 'Simon Fraser University',
       link: 'https://www.sfu.ca/',
       description: 'May 2024'

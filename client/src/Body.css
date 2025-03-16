@@ -19,7 +19,7 @@
 /* General layout */
 .resume-container {
   padding: 20px;
-  max-width: calc(62%);
+  max-width: calc(85%);
 
   /* Set both the left and right margin to auto to center the container */
   margin: auto auto;

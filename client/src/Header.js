@@ -97,8 +97,8 @@ export default function Headers() {
         <header className="App-header">
             {/* <img src={logo} className="App-logo" alt="logo" /> */}
             <div className="Paragraph-header">
-            <h3>Hello! I am Jagpreet Grewal <span class="wave">👋</span></h3>
-            <img src="./images/May2024SFUGraduation_Pic1.jpg" alt='Graduation'></img>
+            <h3>Hello! I am</h3> <h1>Jagpreet Grewal</h1>
+            <img src="./images/LinkedInPhoto.jpg" alt='Graduation'></img>
             <p>
             <Typist 
                 typingDelay={100}
@@ -117,15 +117,7 @@ export default function Headers() {
             </Typist>
             </p>
 
-            <p className="centered-paragraph">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-            {/* eslint-disable */}
-            <a href="https://www.linkedin.com/in/jagpreet-g-587977105/" class="fa fa-linkedin" target="_blank" rel="noopener noreferrer"></a>
-            <a href="mailto: Jagpreet Grewal<j.grewal.official@gmail.com>" class="fa fa-google" target="_blank" rel="noopener noreferrer"></a> 
-            <a href="tel:778-867-9428" class="fa fa-phone" target="_blank" rel="noopener noreferrer"></a>
-            <a href="https://github.com/JagpreetGrewal" class="fa fa-github" target="_blank" rel="noopener noreferrer"></a>
-            {/* eslint-enable */}
-            </p>
+            {/*
             <form id="myForm" onSubmit={handleSubmit}>
             <label>Alternatively, let me contact you: </label>
             <br />
@@ -154,7 +146,7 @@ export default function Headers() {
                 onSubmit={handleSubmit}
             />
             </form> 
-            <p><br></br></p>
+            <p><br></br></p> */}
             </div>
             {/* <p><br /></p>
             <button onClick = {myApiCall}>Make API call</button>

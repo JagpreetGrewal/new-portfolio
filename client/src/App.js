@@ -5,61 +5,36 @@ import Headers from './Header';
 import MyBody from './Body';
 import MyGame from './Game';
 
-export const NoMatch = () => <div>No match</div>
+export const NoMatch = () => <div>No match</div>;
 
-// This holds links to make it easier to change variables, and it's easier to read and write.
 export const contentMap = {
-  home: {route: "/", path: <Headers id="intro"/>, image: './images/Stock-coding.jpg',},
-  about:  {route: "/about", path: <MyBody id="aboutme"/>, image: './images/Stock-engineering.jpg'},
-  game: {route: "/game", path: <MyGame />, image: './images/Stock-engineering.jpg'},
-  notMatch: {route: "*", path: <NoMatch />, image: './images/Stock-coding.jpg'},
-}
+  home: { route: "/", path: <Headers id="intro" />, image: "./images/Stock-coding.jpg" },
+  about: { route: "/about", path: <MyBody id="aboutme" />, image: "./images/Stock-engineering.jpg" },
+  game: { route: "/game", path: <MyGame />, image: "./images/Stock-engineering.jpg" },
+  notMatch: { route: "*", path: <NoMatch />, image: "./images/Stock-coding.jpg" },
+};
+
+// Social Links Component
+const SocialLinks = () => {
+  return (
+    <div className="social-links">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>  
+      {/* eslint-disable */}
+      <a href="https://www.linkedin.com/in/jagpreet-g-587977105/" className="fa fa-linkedin" target="_blank" rel="noopener noreferrer"></a>
+      <a href="mailto:j.grewal.official@gmail.com" className="fa fa-google" target="_blank" rel="noopener noreferrer"></a>
+      <a href="tel:778-867-9428" className="fa fa-phone" target="_blank" rel="noopener noreferrer"></a>
+      <a href="https://github.com/JagpreetGrewal" className="fa fa-github" target="_blank" rel="noopener noreferrer"></a>
+    </div>
+  );
+};
 
 function App() {
-
   return (
     <Router>
-    {/* <nav className="navbar">
-      <ul className="nav-list">
-        <li className="nav-item">
-            <Link 
-              to={contentMap.home.route} 
-              className="nav-link" 
-            >
-              Home
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link 
-              to={contentMap.about.route} 
-              className="nav-link" 
-            >
-              About Me
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link 
-              to={contentMap.game.route} 
-              className="nav-link" 
-            >
-              Play My Game
-            </Link>
-          </li>
-        </ul>
-      </nav>
-
-       */}
-      {/* <Routes>
-        <Route path={contentMap.home.route} element={contentMap.home.path} />
-        <Route path={contentMap.about.route} element={contentMap.about.path} />
-        <Route path={contentMap.game.route} element={contentMap.game.path} />
-        <Route path={contentMap.notMatch.route} element={contentMap.notMatch.path}/> */}
-        {/* <Route path="/projects" element={<Projects />} />  */}
-      {/* </Routes> */}
-    {contentMap.home.path} 
-    {contentMap.about.path}
-    {/* {contentMap.game.path} */}
-    </Router>    
+      <SocialLinks />
+      {contentMap.home.path}
+      {contentMap.about.path}
+    </Router>
   );
 }
 

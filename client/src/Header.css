@@ -29,7 +29,7 @@
   .App-header {
     background-color: #333;
     min-height: 50vh;
-    width: calc(62%);
+    width: calc(85%);
     padding:20px;
     display: flex;
     flex-direction: column;
@@ -71,17 +71,21 @@
   font-family: "Lucida Console"
 }
 
-  .Paragraph-header h3 { 
+  /* .Paragraph-header h3 { 
     text-align: center;
-    /* font-family: "Papyrus"; */
+  } */
+  
+  .Paragraph-header h1 {
+    color: #007bff;
   }
 
   .Paragraph-header img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: calc(44% - 40px);
+    width: calc(20%);
     border-style: solid;
+    border-radius: 50%;
     border-color:white;
   }
 
@@ -92,43 +96,6 @@
   .Paragraph-header form {
     justify-content: center;
     text-align: center;
-  }
-
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 30px;
-  text-align: center;
-  text-decoration: none;
-  background: #3B5998;
-  color: white;
-  margin: 5px 2px;
-}
-  
-  /* Add a hover effect if you want */
-  .fa:hover {
-    opacity: 0.7;
-  }
-
-  .fa:focus, .fa:active { 
-    text-decoration: none;
-    background: #3B5998;
-    color: white;
-  }
-
-  .fa-google, .fa-google:focus, .fa-google:active {
-    background: #dd4b39;
-    color: white;
-  }
-
-  .fa-linkedin, .fa-linkedin:focus, .fa-linkedin:active {
-    background: #007bb5;
-    color: white;
-  }
-
-  .fa-github, .fa-github:focus, .fa-github:active {
-    background: #000000;
-    color: white;
   }
 
 .wave {

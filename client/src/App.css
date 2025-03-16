@@ -4,6 +4,104 @@ body {
     padding: 0;
     background-color: #444; /* Light background for modern feel */
   }
+
+  .social-links {
+    position: fixed;
+    left: 1.5vmin;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .social-links::before,
+  .social-links::after {
+    content: "";
+    position: absolute;
+    left: calc(1.5vmin + 20px);
+    width: 2px;
+    height: 100%;
+    background-color: white;
+  }
+  
+  .social-links::before {
+    top: -100%;
+    bottom: calc(100% - 10px); /* Adjust to reach the first link */
+  }
+  
+  .social-links::after {
+    top: calc(100% + 10px); /* Adjust to start after the last link */
+    bottom: 0;
+  }  
+  
+  .social-links a {
+    display: inline-block;
+    font-size: 24px;
+    /* color: #333; */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    height: 30px;
+    width: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    /* background: #3B5998; */
+    background: #000000;
+    color: white;
+    margin: 5px 2px;
+  }
+    
+    /* Add a hover effect if you want */
+    .fa:hover {
+      opacity: 0.7;
+      background: #3B5998;
+      transform: translateY(-10%);
+      transition: transform 0.3s;
+    }
+  
+    .fa:focus, .fa:active { 
+      text-decoration: none;
+      /* background: #3B5998; */
+      color: white;
+    }
+  
+    .fa-google, .fa-google:focus, .fa-google:active {
+      /* background: #dd4b39; */
+      background: #000000;
+      color: white;
+    }
+    .fa-google:hover {
+      background: #dd4b39;
+    }
+  
+    .fa-linkedin, .fa-linkedin:focus, .fa-linkedin:active {
+      /* background: #007bb5; */
+      background: #000000;
+      color: white;
+    }
+
+    .fa-linkedin:hover {
+      background: #007bb5;
+    }
+  
+    .fa-github, .fa-github:focus, .fa-github:active {
+      background: #000000;
+      color: white;
+    }  
+
+    .fa-github:hover {
+      background: #000000;
+    }
   
   .navbar {
     background-color: #333; /* Dark background for navbar */
