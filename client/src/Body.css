@@ -32,8 +32,10 @@
 }
 
 .resume-title {
-  font-size: calc(3vmin);
+  font-size: calc(5vmin);
+  font-family: "Courier New";
   font-weight: bold;
+  /* color: blue; */
   margin-bottom: 20px;
   width: 100%;
 }
