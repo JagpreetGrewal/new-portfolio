@@ -67,6 +67,10 @@ body {
     background: #000000;
     color: white;
     /* margin: 5px 2px; */
+    transition: box-shadow 0.3s ease-in-out; /* Smooth glow effect */
+
+    /* Default glow */
+    box-shadow: 0 0 1.2vmin rgba(255, 255, 255, 0.5);    
   }
     
     /* Add a hover effect if you want */
@@ -108,7 +112,8 @@ body {
     }  
 
     .fa-github:hover {
-      background: #000000;
+      background: white;
+      color: black;
     }
   
   .navbar {
@@ -224,13 +229,15 @@ body {
     .social-links {
       z-index: 9999;
       position: fixed;
-      left: 0;
+      left: 10%;
       bottom: 0;
       top: auto;
-      width: 100%;
+      width: 80%;
       height: auto;
       flex-direction: row;
       justify-content: center;
+      border-radius: 4vmin;
+      /* border-left: 25%; */
       gap: 5vmin;
       padding: 3vmin 0;
       background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
@@ -240,6 +247,14 @@ body {
       color: #000000;
       background: white;
     }
+
+    .fa:hover {
+      color: white;
+    }
+
+    .fa-github:hover {
+      background: #000000;
+    }    
   
     /* Remove vertical white lines */
     .social-links::before,
