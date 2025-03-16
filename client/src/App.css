@@ -70,7 +70,7 @@ body {
     transition: box-shadow 0.3s ease-in-out; /* Smooth glow effect */
 
     /* Default glow */
-    box-shadow: 0 0 1.2vmin rgba(255, 255, 255, 0.5);    
+    box-shadow: 0 0 1.3vmin rgba(255, 255, 255, 0.5);    
   }
     
     /* Add a hover effect if you want */
@@ -246,6 +246,7 @@ body {
     .fa {
       color: #000000;
       background: white;
+      box-shadow: 0 0 3vmin rgba(255, 255, 255, 0.5);   
     }
 
     .fa:hover {
