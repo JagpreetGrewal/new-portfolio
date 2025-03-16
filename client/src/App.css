@@ -232,8 +232,13 @@ body {
       flex-direction: row;
       justify-content: center;
       gap: 5vmin;
-      padding: 1vmin 0;
+      padding: 3vmin 0;
       background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    }
+
+    .fa {
+      color: #000000;
+      background: white;
     }
   
     /* Remove vertical white lines */
@@ -244,9 +249,9 @@ body {
   
     /* Resize icons for mobile */
     .social-links a {
-      width: 2vmin;
-      height: 2vmin;
-      font-size: 1vmin;
+      width: 3vmin;
+      height: 3vmin;
+      font-size: 3vmin;
     }
   }
 
