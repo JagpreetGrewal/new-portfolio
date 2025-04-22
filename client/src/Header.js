@@ -18,9 +18,16 @@ export const myEmailCall = (arg) => {
     })
 }
 
-const aboutMeDescriptions = [
+/*
     <>
       I am a Back-End Software Engineer at <u>LM West Financial Corp</u>.
+    </>,
+
+*/
+
+const aboutMeDescriptions = [
+    <>
+    I am a former Back-End Software Engineer at <u>LM West Financial Corp</u>.
     </>,    
     <>
       I am a SFU undergraduate with a <u>B.A.Sc. in Computer Engineering</u>.
